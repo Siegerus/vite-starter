@@ -37,6 +37,10 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'src/index.html'),
                 main: resolve(__dirname, 'src/page.html'),
+                /* about: resolve(__dirname, 'src/pages/about/index.html'),
+                node: resolve(__dirname, 'src/pages/node/index.html'),
+                oop: resolve(__dirname, 'src/pages/oop/index.html'),
+                constructors: resolve(__dirname, 'src/pages/oop/constructors/index.html') */
             }
         }
     },
