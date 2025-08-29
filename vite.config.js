@@ -2,6 +2,13 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
+/* const partDirs = [
+    'src/partials',
+    'src/pages/about',
+    'src/pages/node',
+    'src/pages/oop',
+]; */
+
 export default defineConfig({
     root: 'src',
     base: '',
