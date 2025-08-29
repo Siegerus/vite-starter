@@ -4,6 +4,7 @@ import './scss/main.scss';
 //js
 import { navMenu } from "./main-menu.js";
 import { result } from './json';
+import './my-script.js';
 
 const m = [{
         title: 'Home',
