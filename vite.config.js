@@ -5,11 +5,24 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig({
     root: 'src',
     base: '',
-    plugins: [handlebars({
- 
-        partialDirectory: resolve(__dirname, 'src/partials'),
-        reloadOnPartialChange: true,
-    })],
+    plugins: [
+        handlebars({
+            partialDirectory: resolve(__dirname, 'src/partials'),
+            reloadOnPartialChange: true,
+            reload: true,
+            refresh: true,
+        }),
+        {
+            handleHotUpdate({ file, server }) {
+                if (file.endsWith(".hbs")) {
+                    server.ws.send({
+                        type: "full-reload",
+                        path: "*",
+                    });
+                }
+            },
+        },
+    ],
     build: {
         outDir: '../dist',
         emptyOutDir: true,

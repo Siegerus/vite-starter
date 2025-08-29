@@ -1,5 +1,7 @@
 ## Верстка многостраничных сайтов на основе Vite 3
 
+[GitHub](https://github.com/shigaev/vite-build?ysclid=mevnuorkof622721235)
+
 * После клонирования ``npm install``
 * ``npm run dev`` 
 * перейти на хост: ``http://localhost:5173/``
