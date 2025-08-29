@@ -5,9 +5,9 @@ import { pageData } from './src/pages';
 
 const partDirs = [
     'src/partials',
-    'src/pages/about',
-    'src/pages/node',
-    'src/pages/oop',
+    // 'src/pages/about',
+    // 'src/pages/node',
+    // 'src/pages/oop',
 ];
 
 export default defineConfig({
@@ -27,10 +27,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'src/index.html'),
-                about: resolve(__dirname, 'src/pages/about/index.html'),
-                node: resolve(__dirname, 'src/pages/node/index.html'),
-                oop: resolve(__dirname, 'src/pages/oop/index.html'),
-                constructors: resolve(__dirname, 'src/pages/oop/constructors/index.html')
+                // about: resolve(__dirname, 'src/pages/about/index.html'),
+                // node: resolve(__dirname, 'src/pages/node/index.html'),
+                // oop: resolve(__dirname, 'src/pages/oop/index.html'),
+                // constructors: resolve(__dirname, 'src/pages/oop/constructors/index.html')
             }
         }
     },
