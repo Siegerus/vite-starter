@@ -14,6 +14,12 @@ export default defineConfig({
     base: '',
     plugins: [
         handlebars({
+            // context(pagePath) {
+            //     return pageData[pagePath];
+            // },
+            // // partialDirectory: resolve(__dirname, 'src/partials'),
+            // partialDirectory: partDirs,
+
             partialDirectory: resolve(__dirname, 'src/partials'),
             reloadOnPartialChange: true,
             reload: true,
@@ -37,6 +43,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'src/index.html'),
                 main: resolve(__dirname, 'src/page.html'),
+                
                 /* about: resolve(__dirname, 'src/pages/about/index.html'),
                 node: resolve(__dirname, 'src/pages/node/index.html'),
                 oop: resolve(__dirname, 'src/pages/oop/index.html'),
