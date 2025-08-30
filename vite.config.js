@@ -1,26 +1,24 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import { pageData } from './src/pages';
 import handlebars from 'vite-plugin-handlebars';
 
-/* const partDirs = [
+
+const partDirs = [
     'src/partials',
-    'src/pages/about',
-    'src/pages/node',
-    'src/pages/oop',
-]; */
+    'src/pages',
+];
 
 export default defineConfig({
     root: 'src',
     base: '',
     plugins: [
         handlebars({
-            // context(pagePath) {
-            //     return pageData[pagePath];
-            // },
-            // // partialDirectory: resolve(__dirname, 'src/partials'),
-            // partialDirectory: partDirs,
-
-            partialDirectory: resolve(__dirname, 'src/partials'),
+            context(pagePath) {
+                return pageData[pagePath];
+            },
+            partialDirectory: partDirs,
+            // partialDirectory: resolve(__dirname, 'src/partials'),
             reloadOnPartialChange: true,
             reload: true,
             refresh: true,
@@ -42,7 +40,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'src/index.html'),
-                main: resolve(__dirname, 'src/page.html'),
+                pages: resolve(__dirname, 'src/pages/page.html'),
                 
                 /* about: resolve(__dirname, 'src/pages/about/index.html'),
                 node: resolve(__dirname, 'src/pages/node/index.html'),
