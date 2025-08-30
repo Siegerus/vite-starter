@@ -2,4 +2,6 @@
 import './scss/main.scss';
 
 //js
-import './my-script.js'; 
+import './js/section.js'; 
+import './js/header.js';
+import './js/footer.js';
